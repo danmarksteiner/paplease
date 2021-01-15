@@ -1,0 +1,151 @@
+
+// ------------------------------
+// Flexbox Grid -----------------
+// ------------------------------
+
+.flex_row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: stretch;
+	width: 100%;
+}
+
+@include responsive($xs) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_xs_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_xs_hidden {
+		display: none;
+	}
+}
+
+@include responsive($sm) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_sm_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_sm_hidden {
+		display: none;
+	}
+}
+
+@include responsive($md) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_md_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_md_hidden {
+		display: none;
+	}
+}
+
+@include responsive($lg) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_lg_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_lg_hidden {
+		display: none;
+	}
+}
+
+@include responsive($xl) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_xl_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_xl_hidden {
+		display: none;
+	}
+}
+
+@include responsive($xxl) {
+
+	@for $i from 1 through $grid_columns {
+		
+		.flex_xxl_#{$i} {
+			$column_width: percentage( 1 / ($grid_columns / $i) );
+			$column_gutter: percentage($grid_gutter / 100);
+			width: $column_width - $column_gutter;
+			margin: ( $grid_gutter / 2 ) + %;
+			min-height: 1px;
+
+			&.no_pad {
+				width: $column_width;
+				margin: 0;
+			}
+		}
+	}
+
+	.flex_xxl_hidden {
+		display: none;
+	}
+}

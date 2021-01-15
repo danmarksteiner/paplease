@@ -1,0 +1,174 @@
+/* Services Styles */
+.services {
+  @include responsive($xl) {
+    padding: 45px 0;
+    position: relative;
+  }
+  h2 {
+    @include responsive($xl) {
+      text-align: center;
+    }
+  }
+  .services-list {
+    @include clearfix();
+    @include responsive($xl) {
+      position: relative;
+      max-width: 1175px;
+      margin: auto;
+    }
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #a1a1a1;
+      &:first-child {
+        border-top: 1px solid #a1a1a1;
+      }
+      @include responsive($xl) {
+        border: none;
+        &:first-child {
+          border: none;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        max-width: 58px;
+        @include responsive($xl) {
+          max-width: 108px;
+        }
+      }
+    }
+    .services-item {
+      display: table;
+      width: 100%;
+      padding: 10px 14px 0;
+      @include responsive($xl) {
+        width: 33%;
+        float: left;
+        padding: 25px 14px;
+      }
+      .services-item-image,
+      .services-item-title {
+        display: table-cell;
+        vertical-align: middle;
+        min-height: 58px;
+        margin-bottom: 10px;
+        @include responsive($xl) {
+          display: block;
+        }
+      }
+      .services-item-image {
+        width: 72px;
+        @include responsive($xl) {
+          display: none;
+        }
+      }
+      .services-item-image-desktop {
+        display: none;
+        @include responsive($xl) {
+          display: block;
+          text-align: center;
+        }
+      }
+      .services-item-title {
+        text-align: right;
+        @include responsive($xl) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .services-reveal-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20px;
+    @include responsive($xl) {
+      display: none;
+    }
+    &:after {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(-45deg);
+      padding: 5px; /* Arrow size */
+      box-shadow: 1px -1px 0 1px $primary1 inset;
+      -webkit-box-shadow: 1px -1px $primary1 inset;
+      border: solid transparent;
+      border-width: 0 0 2rem 2rem;
+      content: '';
+    }
+    &.active {
+      &:after {
+        bottom: 12px;
+        transform: translate(-50%, 0) rotate(-225deg);
+      }
+    }
+  }
+  .services-reveal {
+    background-color: #000;
+    display: none;
+    @include responsive($xl) {
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      width: 0px;
+      height: 0px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: all 0.25s ease-in-out;
+      visibility: hidden;
+      &.active {
+        width: 578px;
+        height: 578px;
+        transition: all 0.25s ease-in-out;
+        visibility: visible;
+        p {
+          transition: opacity 0.5s ease-in-out;
+          transition-delay: 0.25s;
+          opacity: 1;
+        }
+        .serviceClose {
+          @include responsive($xl) {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            transition-delay: 0.25s;
+          }
+        }
+      }
+    }
+    p {
+      color: #fff;
+      padding: 22px;
+      @include responsive($xl) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0 ease-in-out;
+      }
+    }
+    .serviceClose {
+      display: none;
+      @include responsive($xl) {
+        color: #000;
+        position: fixed;
+        top: 30px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0 ease-in-out;
+        display: block;
+      }
+    }
+  }
+}

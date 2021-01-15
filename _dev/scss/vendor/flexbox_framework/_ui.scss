@@ -1,0 +1,80 @@
+
+// ------------------------------
+// Styling Framework ------------
+// ------------------------------
+
+//links reset
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+//buttons
+.btn {
+	display: inline-block;
+	background-color: #cecece;
+	padding: $button_padding_default;
+	border-radius: $button_radius;
+	@include border(1px, solid, darken(#cecece, $button_border_color_change), top, left, bottom, right);
+	@include transition(1s, linear);
+
+	&:hover {
+		filter: alpha(opacity=85);
+		background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.03) 60%,rgba(0,0,0,.15));
+		background-image: linear-gradient(transparent,rgba(0,0,0,.03) 60%,rgba(0,0,0,.15));
+	}
+
+	&:active {
+		background-color: darken(#cecece, $button_active);
+	}
+
+	&.btn_info {
+		color: darken($button_info_color, $button_color_change);
+		background-color: $button_info_color;
+		@include border(1px, solid, darken($button_info_color, $button_border_color_change), top, left, bottom, right);
+
+		&:active {
+			background-color: darken($button_info_color, $button_active);
+		}
+	}
+
+	&.btn_success {
+		color: darken($button_success_color, $button_color_change);
+		background-color: $button_success_color;
+		@include border(1px, solid, darken($button_success_color, $button_border_color_change), top, left, bottom, right);
+
+		&:active {
+			background-color: darken($button_success_color, $button_active);
+		}
+	}
+
+	&.btn_warning {
+		color: darken($button_warning_color, $button_color_change);
+		background-color: $button_warning_color;
+		@include border(1px, solid, darken($button_warning_color, $button_border_color_change), top, left, bottom, right);
+
+		&:active {
+			background-color: darken($button_warning_color, $button_active);
+		}
+	}
+
+	&.btn_danger {
+		color: darken($button_danger_color, $button_color_change);
+		background-color: $button_danger_color;
+		@include border(1px, solid, darken($button_danger_color, $button_border_color_change), top, left, bottom, right);
+
+		&:active {
+			background-color: darken($button_danger_color, $button_active);
+		}
+	}
+
+	&.btn_sm {
+		font-size: $button_sm_font_size;
+		padding: $button_sm_padding;
+	}
+
+	&.btn_lg {
+		font-size: $button_lg_font_size;
+		padding: $button_lg_padding;
+	}
+}

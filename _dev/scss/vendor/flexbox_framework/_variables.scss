@@ -1,0 +1,52 @@
+
+// ------------------------------
+// Variables --------------------
+// ------------------------------
+
+// Colours
+$color_1:                    #CECECE;
+$button_info_color:          rgba(066, 184, 221, 1);
+$button_success_color:       rgba(028, 184, 065, 1);
+$button_warning_color:       rgba(223, 117, 020, 1);
+$button_danger_color:        rgba(202, 060, 060, 1);
+
+// Responsive variables (mobile up)
+$xs:                         0px;
+$sm:                         320px;
+$md:                         480px;
+$lg:                         768px;
+$xl:                         1024px;
+$xxl:                        1367px;
+
+
+// Global variables
+$container_width:            1175px;
+
+// Grid variables
+$grid_columns:               12;
+$grid_gutter:                2;  // number used as a percentage
+
+// Table variables
+// $table_border_color:         $color_1;
+
+// .btn variables
+// $button_padding_default:     5px 15px;
+// $button_radius:              4px;
+
+// $button_color_change:        35%;
+// $button_border_color_change: 10%;
+// $button_active:              5%;
+
+// .btn_sm variables
+// $button_sm_padding:          3px 10px;
+// $button_sm_font_size:        70%;
+
+// .btn_lg variables
+// $button_lg_padding:          10px 25px;
+// $button_lg_font_size:        120%;
+
+// Input variables
+// $input_border_color:         $color_1;
+// $input_padding_default:      5px 7px;
+// $input_radius:               $button_radius;
+// $submit_padding_default:     6px 7px;

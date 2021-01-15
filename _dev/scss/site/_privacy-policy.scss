@@ -1,0 +1,57 @@
+/* Privacy Policy Styles */
+.policy-pages {
+    padding: 40px 0;
+    h1 {
+        letter-spacing: 4.5px;
+        font-size: 4rem;
+        line-height: 4.2rem;
+    }
+    h2 {
+        letter-spacing: 2px;
+        font-size: 2rem;
+        line-height: 2.375rem;
+        margin-top: 40px;
+    }
+    h3 {
+        font-family: 'bebas_neuebold', arial, helvetica, sans-serif;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        line-height: 2.375rem;
+        margin-bottom: 14px;
+        margin-top: 40px;
+    }
+    p, th, td {
+        margin-bottom: 20px;
+        font-family: arial, helvetica, sans-serif;
+        line-height: 1.75rem;
+        letter-spacing: initial;
+    }
+    th {
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    td {
+        vertical-align: top;
+    }
+    th, td {
+        font-size: 12px;
+        padding: 5px;
+        line-height: 14px;
+        @include responsive($xl) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    a {
+        word-break: break-all;
+    }
+    table {
+        margin-bottom: 40px;
+    }
+    img {
+        max-width: 100px;
+        @include responsive($xl) {
+            max-width: 200px;
+        }
+    }
+}

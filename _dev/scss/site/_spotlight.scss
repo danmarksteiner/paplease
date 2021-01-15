@@ -1,0 +1,70 @@
+/* Spotlight Styles */
+.spotlight {
+    background: $primary1;
+    height: 100vh;
+    position: relative;
+    img {
+        max-width: 156px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        @include responsive($lg) {
+            max-width: 195px;
+        }
+        /* Landscape */
+        @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 812px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: landscape) {
+            transform: translate(-50%, -60%);
+        }
+    }
+    .spotlight-scroll {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @media only screen 
+        and (orientation: landscape) {
+            bottom: 0;
+        }
+        @include responsive($xxl) {
+            bottom: 70px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            span {
+                color: $primary2;
+                position: relative;
+                padding: 18px 18px 45px 18px;
+                display: block;
+                font-family: 'bebas_neuebold', arial, helvetica, sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.1rem;
+                background: url('../images/layout/arw.jpg') no-repeat center 50px;
+                background-size: 28px auto;
+                // /* Arrow after scroll link */
+                // &:after {
+                //     position: absolute;
+                //     bottom: -16px;
+                //     left: 50%;
+                //     transform: translate(-50%, 0) rotate(-45deg);
+                //     padding: 10px; /* Arrow size */
+                //     -webkit-box-shadow: 1px -1px 0 1px $primary2 inset;
+                //     -moz-box-shadow: 1px -1px 0 1px $primary2 inset;
+                //     box-shadow: 1px -1px 0 1px $primary2 inset;
+                //     border: solid transparent;
+                //     border-width: 0 0 2rem 2rem;
+                //     transition: 0.2s;
+                //     content: "";
+                // }
+            }
+        }
+    }
+}

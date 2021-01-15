@@ -1,0 +1,78 @@
+/* Introduction Styles */
+.introduction {
+    position: relative;
+    text-align: center;
+    background: url('../images/content/introduction-bg.jpg') no-repeat top center;
+    background-size: cover;
+    outline: none;
+    min-height: 225px;
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 768px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+        background-size: 100% auto;
+        min-height: 330px;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+        min-height: 667px;
+    }
+    @media only screen 
+    and (min-device-width: 769px) 
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+        background-size: 100% auto;
+        min-height: 520px;
+    }
+    @include responsive($xl) {
+        min-height: 667px;
+    }
+    @include responsive($xxl) {
+        min-height: 950px;
+    }
+    .introduction-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        @media only screen and (orientation: landscape) {
+            display: none;
+        }
+        @include responsive($xl) {
+            display: block;
+        }
+    }
+    .introduction-logo-desktop {
+        display: none;
+        @include responsive($xl) {
+            display: inline-block;
+            max-width: 195px;
+        }
+        @include responsive($xl) {
+            margin-bottom: 50px;
+        }
+    }
+    .introduction-logo-mobile {
+        display: inline-block;
+        margin-bottom: 10px;
+        @include responsive($xl) {
+            display: none;
+        }
+        @media only screen and (orientation: landscape) {
+            display: none;
+        }
+    }
+    h2 {
+        margin-bottom: 0;
+        @include responsive($xl) {
+            font-size: 4.0625rem;
+        }
+    }
+}

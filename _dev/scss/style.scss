@@ -1,0 +1,24 @@
+//import vendor styles
+@import
+	'vendor/flexbox_framework/web_framework.scss',
+	'vendor/masterslider/masterslider.scss',
+	'vendor/masterslider/masterslider-theme.scss',
+	'vendor/hamburger/hamburgers.scss';
+
+//import site styles
+@import
+	'site/normalize',
+	'site/fonts',
+	'site/variables',
+	'site/global',
+	'site/footer',
+	'site/navigation',
+	'site/spotlight',
+	'site/introduction',
+	'site/mission-statement',
+	'site/discretion',
+	'site/services',
+	'site/who-we-are',
+	'site/contact',
+	'site/privacy-policy'
+	;

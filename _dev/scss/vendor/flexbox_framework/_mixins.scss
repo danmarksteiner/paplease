@@ -1,0 +1,101 @@
+
+// ------------------------------
+// Mixins -----------------------
+// ------------------------------
+
+//responsive breakpoints
+@mixin responsive($device) {
+
+	@media (min-width: $device) {
+		@content;
+	}
+}
+
+//responsive breakpoints
+@mixin responsive-tablet($device) {
+	@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+		@content;
+	}
+}
+
+//transform translate
+@mixin transform_translate($position:relative, $x:0%, $y:0%) {
+	position: $position;
+	left: $x;
+	top: $y;
+	transform: translate(-$x, -$y);
+	-ms-transform: translate(-$x, -$y);
+	-webkit-transform: translate(-$x, -$y);
+}
+
+//border
+//syntax: @include border(1px, solid, #000000, top, left, bottom, right);
+//syntax: @include border(1px, solid, #000000, all);
+@mixin border ($border_width, $border_style, $border_color, $sides...) {
+	@each $side in $sides {
+
+		@if ($side == 'top' or $side == 'right' or $side == 'bottom' or $side == 'left') {
+			border-#{$side}: $border_width $border_style $border_color;
+		}
+
+		@else if ($side == 'all' or $side == null) {
+			border: $border_width $border_style $border_color;
+		}
+	}
+}
+
+//transition
+@mixin transition($speed: 0.15s, $ease: linear) {
+	transition: $speed $ease;
+	-o-transition: $speed $ease;
+	-ms-transition: $speed $ease;
+	-moz-transition: $speed $ease;
+	-webkit-transition: $speed $ease;
+}
+
+//css keyframes
+@mixin keyframes($name) {
+
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	} 
+}
+
+//retina images
+@mixin retina_image($path, $width, $height) {
+
+	@media (min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+		background-image: url($path);
+		background-size: $width $height;
+	}
+}
+
+//border radius
+@mixin border-radius($value) {
+    border-radius: $value;
+	-moz-border-radius: $value;
+	-webkit-border-radius: $value;
+}
+
+
+//clearfix
+@mixin clearfix {
+
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}

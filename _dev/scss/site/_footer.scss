@@ -1,0 +1,87 @@
+/* Footer */
+footer {
+    background-color: #000000;
+    .container {
+        padding: 25px 14px;
+        @include responsive($xl) {
+            padding: 50px 55px;
+        }
+    }
+    .footer-logo {
+        display: none;
+        max-width: 108px;
+        float: right;
+        @include responsive($xl) {
+            display: block;
+        }
+    }
+    .footer-details {
+        @include clearfix();
+    }
+    a {
+        color: #fff;
+        display: block;
+        text-align: right;
+        font-family: 'bebas_neue_regularregular', arial, helvetica, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        margin-bottom: 8px;
+        &:first-child {
+            margin-bottom: 16px;
+        }
+        @include responsive($xl) {
+            font-size: 2.1875rem;
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    span {
+        padding-top: 20px;
+        color: #fff;
+        display: block;
+        text-align: right;
+        font-family: 'bebas_neue_regularregular', arial, helvetica, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        margin-bottom: 8px;
+        a {
+            font-size: 1rem;
+            letter-spacing: 2.5px;
+            display: inline-block;
+            @include responsive($xl) {
+                font-size: 1rem;
+                letter-spacing: 2.5px;
+            }
+        }
+    }
+    .footer-social {
+        span {
+            padding: 0;
+            margin: 0;
+            &:first-child {
+                padding-top: 20px;
+            }
+        }
+        a {
+            padding: 5px 35px 5px 0;
+            margin-bottom: 8px;
+            &.footer-twitter {
+                background: url('../images/content/footer-social-twitter.png') no-repeat center right;
+                background-size: 26px 26px;
+            }
+            &.footer-instagram {
+                background: url('../images/content/footer-social-instagram.png') no-repeat center right;
+                background-size: 26px 26px;
+            }
+            &.footer-facebook {
+                background: url('../images/content/footer-social-facebook.png') no-repeat center right;
+                background-size: 26px 26px;
+            }
+        }
+    }
+}

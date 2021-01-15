@@ -1,0 +1,231 @@
+/* Global Styles */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 1;
+  transition: 1s opacity;
+}
+.body-wrapper.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+/* Typographic Styles */
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'bebas_neuebold', arial, helvetica, sans-serif;
+  color: $primary1;
+}
+h1 {
+  font-size: $heroSize;
+  line-height: 3rem;
+}
+h2 {
+  font-size: $secondarySize;
+  line-height: $secondarySize;
+  letter-spacing: 2.5px;
+  margin-bottom: 14px;
+  @include responsive($xl) {
+    letter-spacing: 4.5px;
+    font-size: 4rem;
+    line-height: 2.375rem;
+  }
+}
+h3,
+figure {
+  font-family: 'bebas_neue_regularregular', arial, helvetica, sans-serif;
+  font-size: $secondarySize;
+  line-height: $secondarySize;
+  letter-spacing: 2.5px;
+  @include responsive($lg) {
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+  }
+}
+.subtle {
+  font-size: $subtleSize;
+  font-family: 'montserratthin', arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  text-shadow: 0 0 0 #000; /* swap in the font color */
+}
+p {
+  font-size: $bodySize;
+  font-family: 'Austin Web', arial, helvetica, sans-serif;
+  line-height: 1.5rem;
+  @include responsive($xl) {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    letter-spacing: 1.2px;
+  }
+  a {
+    color: $primary1;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+ul {
+  li {
+    font-size: $bodySize;
+    font-family: 'open_sansregular', arial, helvetica, sans-serif;
+    line-height: 1.5rem;
+    list-style: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+    a {
+      color: $primary1;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+input,
+textarea {
+  font-family: 'bebas_neue_regularregular', arial, helvetica, sans-serif;
+  font-size: $secondarySize;
+  line-height: $secondarySize;
+  letter-spacing: 2.5px;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 15px;
+  margin-top: 20px;
+  @include responsive($lg) {
+    font-size: 1.5625rem;
+  }
+}
+input[type='submit'] {
+  background-color: #000;
+  color: #fff;
+  font-family: 'bebas_neuebold';
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+}
+/* Contact Form 7 Styles */
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+span.wpcf7-not-valid-tip,
+.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-validation-errors {
+  color: red;
+  font-size: 1rem;
+  font-family: 'bebas_neuebold';
+  letter-spacing: 1px;
+  padding: 5px 0;
+}
+
+.icon-arrow {
+  width: 22px;
+  height: 12px;
+  background: url('../images/layout/navigation/right-arrow.svg') no-repeat left
+    top;
+}
+blockquote {
+  font-size: $tertiarySize;
+  line-height: 1.75rem;
+  font-family: 'open_sansbold', arial, helvetica, sans-serif;
+  margin-bottom: 22px;
+  @include responsive($lg) {
+    font-size: $headingSize;
+    line-height: 3.25rem;
+  }
+}
+.view-more a {
+  border: 2px solid $primary1;
+  font-size: $bodySize;
+  background: none;
+  color: $primary1;
+  text-transform: uppercase;
+  font-family: 'montserratbold', arial, helvetica, sans-serif;
+  padding: 10px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+.edge-padding {
+  padding: 30px 0;
+  @include responsive($xxl) {
+    padding: 50px 65px;
+  }
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper object,
+.videoWrapper embed,
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.second-row {
+  display: table;
+  width: 100%;
+}
+/* Cookie Policy */
+#cookie-law-info-bar span {
+  font-size: 0.75rem;
+  font-family: 'montserratregular', arial, helvetica, sans-serif;
+  line-height: 1rem;
+  margin: 0 16px;
+  display: block;
+  a {
+    color: $primary1;
+    text-decoration: underline;
+    margin: 16px 0;
+    padding: 8px 16px !important;
+    display: block;
+    text-decoration: none;
+    border-radius: 0;
+    border: 1px solid $primary1 !important;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    @include responsive($lg) {
+      display: inline-block;
+      margin: 0 0 0 20px;
+    }
+    &:hover {
+      -webkit-transition: color 0.2s ease-in-out;
+      -o-transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -o-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+      color: $primary1 !important;
+      background-color: $secondary1 !important;
+    }
+  }
+}

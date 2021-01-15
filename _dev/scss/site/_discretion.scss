@@ -1,0 +1,19 @@
+/* Discretion Styles */
+.discretion {
+    padding: 20px 0;
+    @include responsive($xl) {
+        text-align: center;
+        padding: 45px 0;
+    }
+    h2 {
+        @include responsive($xl) {
+            margin-bottom: 50px;
+        }
+    }
+    p {
+        @include responsive($xl) {
+            max-width: 806px;
+            margin: auto;
+        }
+    }
+}

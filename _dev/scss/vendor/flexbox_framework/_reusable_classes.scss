@@ -1,0 +1,44 @@
+
+// ------------------------------
+// Reusable Classes -------------
+// ------------------------------
+
+.container {
+	width: 100%;
+	max-width: $container_width;
+	margin: 0 auto;
+	padding: 0 14px;
+
+	&.no_pad {
+		padding: 0;
+	}
+}
+
+.container_fluid {
+	width: 100%;
+	padding: 0 15px;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+// ------------------------------
+// Placeholder Selectors --------
+// ------------------------------
+
+//user select
+%user-select {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+%clearfix {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}

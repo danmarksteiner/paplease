@@ -1,0 +1,27 @@
+/* Contact Us Styles */
+.contact {
+    @include responsive($lg) {
+        padding: 80px 0;
+        border-top: 1px solid #000;
+    }
+    form {
+        @include responsive($lg) {
+            .wpcf7-form-control-wrap  {
+                display: block;
+            }
+            .your-name {
+                input {
+                    max-width: 342px;
+                }
+            }
+            .your-email {
+                input {
+                    max-width: 460px;
+                }
+            }
+            textarea, input[type='submit'] {
+                max-width: 930px;
+            }
+        }
+    }
+}
